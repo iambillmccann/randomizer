@@ -4,7 +4,9 @@ import { MetaTags } from '@redwoodjs/web'
 
 const displayThis = () => {
   const names = ['Bill McCann', 'Susan McCann', 'Joe McCann', 'Holly McCann']
-  return 'William F McCann'
+  const rndInt = Math.floor(Math.random() * 4)
+  console.log(rndInt)
+  return names[rndInt]
 }
 
 const HomePage = () => {
