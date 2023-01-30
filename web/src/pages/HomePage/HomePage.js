@@ -1,4 +1,4 @@
-import { Center, Box } from '@chakra-ui/react'
+import { Text, Flex } from '@chakra-ui/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
@@ -7,9 +7,19 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <Box>
-        <Center>Bill McCann</Center>
-      </Box>
+      <Flex
+        width={'100%'}
+        height={'600'}
+        justify={'center'}
+        align={'center'}
+        borderWidth={'2px'}
+        borderColor={'gray.100'}
+        boxShadow={'md'}
+        margin={'5px'}
+        bg={'gray.50'}
+      >
+        <Text>Bill McCann</Text>
+      </Flex>
     </>
   )
 }
