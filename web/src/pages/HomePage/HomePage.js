@@ -1,4 +1,4 @@
-import { Text, Flex } from '@chakra-ui/react'
+import { Text, Flex, ScaleFade } from '@chakra-ui/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
@@ -18,7 +18,9 @@ const HomePage = () => {
         margin={'5px'}
         bg={'gray.50'}
       >
-        <Text fontSize={72}>Bill McCann</Text>
+        <ScaleFade initialScale={0.25} in={true}>
+          <Text fontSize={72}>Bill McCann</Text>
+        </ScaleFade>
       </Flex>
     </>
   )
