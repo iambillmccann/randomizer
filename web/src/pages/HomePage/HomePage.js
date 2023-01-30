@@ -3,10 +3,16 @@ import { Text, Flex, ScaleFade } from '@chakra-ui/react'
 import { MetaTags } from '@redwoodjs/web'
 
 const displayThis = () => {
-  const names = ['Bill McCann', 'Susan McCann', 'Joe McCann', 'Holly McCann']
-  const rndInt = Math.floor(Math.random() * 4)
-  console.log(rndInt)
-  return names[rndInt]
+  const names = [
+    'Bill McCann',
+    'Susan McCann',
+    'Joe McCann',
+    'Holly McCann',
+    'Daisy',
+    'Honey',
+  ]
+  const choice = Math.floor(Math.random() * names.length)
+  return names[choice]
 }
 
 const HomePage = () => {
