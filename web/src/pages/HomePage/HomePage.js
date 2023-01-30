@@ -18,7 +18,7 @@ const HomePage = () => {
         margin={'5px'}
         bg={'gray.50'}
       >
-        <Text>Bill McCann</Text>
+        <Text fontSize={72}>Bill McCann</Text>
       </Flex>
     </>
   )
