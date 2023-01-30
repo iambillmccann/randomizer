@@ -2,6 +2,11 @@ import { Text, Flex, ScaleFade } from '@chakra-ui/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
+const displayThis = () => {
+  const names = ['Bill McCann', 'Susan McCann', 'Joe McCann', 'Holly McCann']
+  return 'William F McCann'
+}
+
 const HomePage = () => {
   return (
     <>
@@ -19,7 +24,7 @@ const HomePage = () => {
         bg={'gray.50'}
       >
         <ScaleFade initialScale={0.25} in={true}>
-          <Text fontSize={72}>Bill McCann</Text>
+          <Text fontSize={72}>{displayThis()}</Text>
         </ScaleFade>
       </Flex>
     </>
