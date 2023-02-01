@@ -1,21 +1,31 @@
+import { useState, useEffect } from 'react'
+
 import { Text, Flex, ScaleFade } from '@chakra-ui/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
+const names = [
+  'Bill McCann',
+  'Susan McCann',
+  'Joe McCann',
+  'Holly McCann',
+  'Daisy',
+  'Honey',
+]
+
 const displayThis = () => {
-  const names = [
-    'Bill McCann',
-    'Susan McCann',
-    'Joe McCann',
-    'Holly McCann',
-    'Daisy',
-    'Honey',
-  ]
   const choice = Math.floor(Math.random() * names.length)
   return names[choice]
 }
 
 const HomePage = () => {
+  const [name, setName] = useState(displayThis())
+  useEffect(() => {
+    setTimeout(() => {
+      setName(displayThis())
+    }, 1000)
+  }, [])
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />
@@ -32,7 +42,7 @@ const HomePage = () => {
         bg={'gray.50'}
       >
         <ScaleFade initialScale={0.25} in={true}>
-          <Text fontSize={72}>{displayThis()}</Text>
+          <Text fontSize={72}>{name}</Text>
         </ScaleFade>
       </Flex>
     </>
