@@ -13,18 +13,18 @@ const names = [
   'Honey',
 ]
 
-const displayThis = () => {
+const getRandomName = (name) => {
   const choice = Math.floor(Math.random() * names.length)
-  return names[choice]
+  return names[choice] === name ? getRandomName(name) : names[choice]
 }
 
 const HomePage = () => {
-  const [name, setName] = useState(displayThis())
+  const [name, setName] = useState(getRandomName())
   useEffect(() => {
     setTimeout(() => {
-      setName(displayThis())
-    }, 1000)
-  }, [])
+      setName(getRandomName())
+    }, 500)
+  })
 
   return (
     <>
