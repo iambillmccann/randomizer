@@ -22,9 +22,15 @@ const getRandomName = (name) => {
 
 const HomePage = () => {
   const [name, setName] = useState(getRandomName())
+  const [count, setCount] = useState(0)
+
   useEffect(() => {
     setTimeout(() => {
-      setName((name) => getRandomName(name))
+      setName((name) => {
+        setCount((count) => count + 1)
+        if (count % 10 === 0) return name
+        else return getRandomName(name)
+      })
     }, 500)
   })
 
