@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-import { Text, Flex, ScaleFade } from '@chakra-ui/react'
+import { Text, Flex, ScaleFade, Center, Button } from '@chakra-ui/react'
 
 import { MetaTags } from '@redwoodjs/web'
 
@@ -23,16 +23,17 @@ const getRandomName = (name) => {
 const HomePage = () => {
   const [name, setName] = useState(getRandomName())
   const [count, setCount] = useState(0)
+  const [buttonText, setButtonText] = useState('Start')
 
-  useEffect(() => {
-    setTimeout(() => {
-      setName((name) => {
-        setCount((count) => count + 1)
-        if (count % 10 === 0) return name
-        else return getRandomName(name)
-      })
-    }, 500)
-  })
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setName((name) => {
+  //       setCount((count) => count + 1)
+  //       if (count % 10 === 0) return name
+  //       else return getRandomName(name)
+  //     })
+  //   }, 500)
+  // })
 
   return (
     <>
@@ -53,6 +54,15 @@ const HomePage = () => {
           <Text fontSize={72}>{name}</Text>
         </ScaleFade>
       </Flex>
+      <Center>
+        <Button
+          onClick={() =>
+            setButtonText(buttonText === 'Start' ? 'Stop' : 'Start')
+          }
+        >
+          {buttonText}
+        </Button>
+      </Center>
     </>
   )
 }
