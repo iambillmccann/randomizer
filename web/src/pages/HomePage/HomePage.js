@@ -13,6 +13,8 @@ const names = [
   'Honey',
 ]
 
+// The function uses recursion to prevent returning the same name twice in a row.
+// Because of the above, it's not truly random. Just sayin'.
 const getRandomName = (name) => {
   const choice = Math.floor(Math.random() * names.length)
   return names[choice] === name ? getRandomName(name) : names[choice]
