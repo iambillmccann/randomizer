@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 import { Text, Flex, ScaleFade, Center, Button } from '@chakra-ui/react'
 
@@ -22,40 +22,41 @@ const getRandomName = (name) => {
 
 const HomePage = () => {
   const [name, setName] = useState(getRandomName())
-  const [count, setCount] = useState(0)
   const [buttonText, setButtonText] = useState('Start')
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setName((name) => {
-  //       setCount((count) => count + 1)
-  //       if (count % 10 === 0) return name
-  //       else return getRandomName(name)
-  //     })
-  //   }, 500)
-  // })
+  useEffect(() => {
+    setTimeout(() => {
+      setName((name) => {
+        if (buttonText === 'Start') return name
+        else return getRandomName(name)
+      })
+    }, 750)
+  })
 
   return (
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <Flex
-        width={'100%'}
-        height={'600'}
-        justify={'center'}
-        align={'center'}
-        borderWidth={'2px'}
-        borderColor={'gray.100'}
-        boxShadow={'md'}
-        margin={'5px'}
-        bg={'gray.50'}
-      >
-        <ScaleFade initialScale={0.25} in={true}>
-          <Text fontSize={72}>{name}</Text>
-        </ScaleFade>
-      </Flex>
+      <Center>
+        <Flex
+          width={'100%'}
+          height={'600'}
+          justify={'center'}
+          align={'center'}
+          borderWidth={'2px'}
+          borderColor={'gray.100'}
+          boxShadow={'md'}
+          margin={'10'}
+          bg={'gray.50'}
+        >
+          <ScaleFade initialScale={0.25} in={true}>
+            <Text fontSize={72}>{name}</Text>
+          </ScaleFade>
+        </Flex>
+      </Center>
       <Center>
         <Button
+          width={'3xs'}
           onClick={() =>
             setButtonText(buttonText === 'Start' ? 'Stop' : 'Start')
           }
