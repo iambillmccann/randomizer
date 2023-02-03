@@ -82,9 +82,9 @@ const HomePage = () => {
           align={'center'}
           borderWidth={'2px'}
           borderColor={'gray.100'}
-          boxShadow={'md'}
+          // boxShadow={'md'}
           margin={'10'}
-          bg={'gray.50'}
+          // bg={'gray.50'}
         >
           <ScaleFade initialScale={0.25} in={true}>
             <Text fontSize={72}>{name}</Text>
@@ -94,6 +94,8 @@ const HomePage = () => {
       <Center>
         <Button
           width={'3xs'}
+          colorScheme={'blue'}
+          variant={'solid'}
           onClick={() =>
             setButtonText(buttonText === 'Start' ? 'Stop' : 'Start')
           }
