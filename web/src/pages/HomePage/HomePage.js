@@ -22,7 +22,7 @@ const HomePage = () => {
   const [name, setName] = useState(getRandomName())
   useEffect(() => {
     setTimeout(() => {
-      setName(getRandomName())
+      setName((name) => getRandomName(name))
     }, 500)
   })
 
