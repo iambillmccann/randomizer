@@ -67,7 +67,7 @@ const HomePage = () => {
         if (buttonText === 'Start') return name
         else return getRandomName(name)
       })
-    }, 750)
+    }, 500)
   })
 
   return (
@@ -83,11 +83,11 @@ const HomePage = () => {
           borderWidth={'2px'}
           borderColor={'gray.100'}
           // boxShadow={'md'}
-          margin={'10'}
-          // bg={'gray.50'}
+          margin={'5'}
+          bg={'blue.50'}
         >
           <ScaleFade initialScale={0.25} in={true}>
-            <Text fontSize={72}>{name}</Text>
+            <Text fontSize={'8xl'}>{name}</Text>
           </ScaleFade>
         </Flex>
       </Center>
