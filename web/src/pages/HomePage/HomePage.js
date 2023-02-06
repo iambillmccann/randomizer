@@ -81,13 +81,15 @@ const HomePage = () => {
           justify={'center'}
           align={'center'}
           borderWidth={'2px'}
-          borderColor={'gray.100'}
+          borderColor={'BlackAlpha.700'}
           // boxShadow={'md'}
           margin={'5'}
-          bg={'blue.50'}
+          // bg={'blue.50'}
         >
           <ScaleFade initialScale={0.25} in={true}>
-            <Text fontSize={'8xl'}>{name}</Text>
+            <Text fontSize={'8xl'} color={'blue.700'} fontWeight={'semibold'}>
+              {name}
+            </Text>
           </ScaleFade>
         </Flex>
       </Center>
