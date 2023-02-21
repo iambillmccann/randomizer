@@ -1,60 +1,17 @@
 import { useState, useEffect } from 'react'
 
 import { Text, Flex, ScaleFade, Center, Button } from '@chakra-ui/react'
+import randomItems from 'public/StudentNames'
 
 import { MetaTags } from '@redwoodjs/web'
 
-const names = [
-  'Gabriela Acevedo',
-  'Rayaan Azmi',
-  'Safiullah Baig',
-  'Erik Chodaba',
-  'Manal Desai',
-  'Riya Desai',
-  'Keya Dhruve',
-  'Thomas Ehrola',
-  'KellyAnne George',
-  'Jillian Jacinto',
-  'Dhyeykumar Kansagara',
-  'Avneet Kaur',
-  'Murtajiz Kazmi',
-  'Steven Kyritsis',
-  'Saketh Lakshmanan Sathiskumar',
-  'Thomas Lanzetti',
-  'Mehak Maqsood',
-  'Ryan McCusker',
-  'Matea Milloshi',
-  'Eli Mojica',
-  'Cristhian Molina Luna',
-  'Deanna Mostafa',
-  'Pedro Pacheco',
-  'Gabriel Pascual',
-  'Dhyey Patel',
-  'Karan Patel',
-  'Manthan Patel',
-  'Rutvi Jatinkumar Patel',
-  'Shiv Patel',
-  'Vashu Patel',
-  'Neel Patil',
-  'Arij Qureshi',
-  'Casey Regetz',
-  'Shriya Shah',
-  'Neha Shirwalker',
-  'Akashdeep Singh',
-  'Jaspreet Singh',
-  'Jemil Srejic',
-  'Ritika Suresh',
-  'Kevyn Thompson',
-  'Sean Ulep',
-  'Sai Vedagiri',
-  'Namitha Yalla',
-]
+const items = randomItems()
 
 // The function uses recursion to prevent returning the same name twice in a row.
 // Because of the above, it's not truly random. Just sayin'.
 const getRandomName = (name) => {
-  const choice = Math.floor(Math.random() * names.length)
-  return names[choice] === name ? getRandomName(name) : names[choice]
+  const choice = Math.floor(Math.random() * items.length)
+  return items[choice] === name ? getRandomName(name) : items[choice]
 }
 
 const HomePage = () => {
