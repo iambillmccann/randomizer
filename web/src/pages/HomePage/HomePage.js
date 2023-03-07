@@ -32,7 +32,7 @@ const removeName = (name) => {
 }
 
 const HomePage = () => {
-  const [name, setName] = useState(getRandomName())
+  const [name, setName] = useState('Click Start for Random Name')
   const [buttonText, setButtonText] = useState('Start')
   const [startStop, setStartStop] = useState(false)
 
