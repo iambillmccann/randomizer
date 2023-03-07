@@ -34,6 +34,7 @@ const removeName = (name) => {
 const HomePage = () => {
   const [name, setName] = useState(getRandomName())
   const [buttonText, setButtonText] = useState('Start')
+  const [startStop, setStartStop] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,10 +73,11 @@ const HomePage = () => {
           colorScheme={'blue'}
           variant={'solid'}
           onClick={() => {
-            setButtonText(buttonText === 'Start' ? 'Stop' : 'Start')
-            if (buttonText === 'Start') {
+            setStartStop(startStop ? false : true)
+            if (startStop) {
+              setButtonText('Start')
               removeName(name)
-            }
+            } else setButtonText('Stop')
           }}
         >
           {buttonText}
