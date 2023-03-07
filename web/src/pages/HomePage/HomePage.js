@@ -13,7 +13,7 @@ let items = randomItems()
 // The function uses recursion to prevent returning the same name twice in a row.
 // Because of the above, it's not truly random. Just sayin'.
 const getRandomName = (name) => {
-  if (items.length === 1) return name
+  if (items.length === 1) return items[0]
   const choice = Math.floor(Math.random() * items.length)
   return items[choice] === name ? getRandomName(name) : items[choice]
 }
@@ -39,7 +39,7 @@ const HomePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setName((name) => {
-        if (buttonText === 'Start') return name
+        if (buttonText === 'Start') return removeName(name)
         else return getRandomName(name)
       })
     }, 500)
@@ -76,7 +76,7 @@ const HomePage = () => {
             setStartStop(startStop ? false : true)
             if (startStop) {
               setButtonText('Start')
-              removeName(name)
+              // removeName(name)
             } else setButtonText('Stop')
           }}
         >
