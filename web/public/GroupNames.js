@@ -1,14 +1,4 @@
-const names = [
-  'Goofy Goobers',
-  'Group Leftovers',
-  'Insert Name Here',
-  'JiNKS',
-  'Mourningwood',
-  'SDF',
-  'Team Thoughtless',
-  'The Akatsuki',
-  'The Back Corners',
-]
+const names = ['Goofy Goobers', 'Gary', 'Band Geeks', 'Squidward']
 
 const randomItems = () => {
   return names
