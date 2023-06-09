@@ -1,4 +1,9 @@
-# Static Assets
+### Setting up the list of names
+To setup a list of names do the following:
+1. Add a new list in the /public folder. Follow the format of one of the existing JavaScript files.
+2. Change the randomItems import to point to the new file.
+
+### Static Assets
 Use this folder to add static files directly to your app. All included files and folders will be copied directly into the `/dist` folder (created when Webpack builds for production). They will also be available during development when you run `yarn rw dev`.
 >Note: files will *not* hot reload while the development server is running. You'll need to manually stop/start to access file changes.
 
