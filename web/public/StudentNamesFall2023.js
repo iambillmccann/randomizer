@@ -27,21 +27,21 @@ const randomItems = () => {
 export default randomItems
 
 /*
-Eaton, Ryan
-Clayton, Brendan
-Kim, Sunfee
-Switlyk, Jeremy
-Wensell, Mitchell
-Palle, Kauvya
-Asral, Curtis
-Soni, Shaili
-Sugihara, Hwa-Lyang
-Vilatoro Taglianeti, Guilherme
-Ortiga, Joshua
-Le, Jonathan
-Li, Xin
-Saripella, Vinay
-Sen, Swarnali
+Ryan Eaton
+Brendan Clayton
+Sunfee Kim
+Jeremy Switlyk
+Mitchell Wensell
+Kauvya Palle
+Curtis Asral
+Shaili Soni
+Hwa-Lyang Sugihara
+Guilherme Vilatoro Taglianeti
+Joshua Ortiga
+Jonathan Le
+Xin Li
+Vinay Saripella
+Swarnali Sen
 Vangapandu, Mythreya
 Cabrera, Jose
 Nagrajan, Gautham
