@@ -39,3 +39,6 @@ export default Header
 ```
 
 Behind the scenes, we are using Webpack's ["file-loader"](https://webpack.js.org/loaders/file-loader/) and ["url-loader](https://webpack.js.org/loaders/url-loader/) (for files smaller than 10kb).
+
+### To Do
+Create a leftside navigation and add a list of choices for randomizing.
