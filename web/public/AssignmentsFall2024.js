@@ -1,8 +1,8 @@
 const names = [
   'Controller Core Logic',
   'Controller Scalability and Load Balancing',
-  'codiblesCLI Core Commands',
-  'DiddyCLI User Management and Permissions',
+  'CLI Core Commands',
+  'CLI User Management and Permissions',
   'Client SDK Core Functionality',
   'Client SDK Advanced Features',
   'Function SDK Core Logic',
