@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react'
 
 import { Text, Flex, ScaleFade, Center, Button } from '@chakra-ui/react'
-import randomItems from 'public/AssignmentsFall2024'
+import randomItems from 'public/AssignmentsSpring2025'
 
 import { MetaTags } from '@redwoodjs/web'
 
