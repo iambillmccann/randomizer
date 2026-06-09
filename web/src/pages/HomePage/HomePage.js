@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react'
 
 import { Text, Flex, ScaleFade, Center, Button } from '@chakra-ui/react'
-import randomItems from 'public/GroupNamesSpring2026B' // <-- Change this to use a different list
+import randomItems from 'public/GroupNamesSummer2026' // <-- Change this to use a different list
 
 import { MetaTags } from '@redwoodjs/web'
 
