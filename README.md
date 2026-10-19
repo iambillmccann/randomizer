@@ -9,3 +9,11 @@ To change the list being ramdonly generated, modify the import of randomItems in
 This deploys automatically to Netlify using their CI/CD.
 
 Run the app at https://cs490-randomizer.netlify.app/
+
+## Fall 2026
+
+For the fall semester we are using these files:
+
+1. GroupNamesFall2026.js = All teaams for the class
+1. GroupNamesFall2026A.js = The teams in Group A
+1. GroupNamesFall2026B.js = The teams in Group B
