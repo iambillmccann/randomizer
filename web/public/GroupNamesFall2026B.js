@@ -4,7 +4,6 @@ const names = [
   'Frightening Coders',
   'Roblox',
   'teamThree',
-  'Merge Conflict',
 ]
 
 const randomItems = () => {
