@@ -2,7 +2,6 @@
   command = "yarn rw deploy netlify --prisma=false --dm=false"
   publish = "web/dist"
   # functions = "api/dist/functions"
-  "AWSTemplateFormatVersion": "2010-09-09"
 
 [build.environment]
   NODE_VERSION = "18"
